@@ -6,26 +6,23 @@ import Touchable from "./components/fundamentalConcepts/Touchable";
 import Buttons from "./components/fundamentalConcepts/Buttons";
 import Alerts from "./components/fundamentalConcepts/Alerts";
 import Stylesheet from "./components/fundamentalConcepts/Stylesheet";
+import Dimentions from "./components/Layouts/Dimentions";
+import DeviceOrientation from "./components/Layouts/DeviceOrientation";
+import FlexBox from "./components/Layouts/FlexBox";
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <>
       {/* <TextComponent /> */}
       {/* <ImageComponent /> */}
       {/* <Touchable /> */}
       {/* <Buttons /> */}
       {/* <Alerts /> */}
-      <Stylesheet />
+      {/* <Stylesheet /> */}
+      {/* <Dimentions /> */}
+      {/* <DeviceOrientation /> */}
+      <FlexBox />
       <StatusBar style="auto" />
-    </View>
+    </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
