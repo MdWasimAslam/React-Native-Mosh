@@ -9,6 +9,8 @@ import Stylesheet from "./components/fundamentalConcepts/Stylesheet";
 import Dimentions from "./components/Layouts/Dimentions";
 import DeviceOrientation from "./components/Layouts/DeviceOrientation";
 import FlexBox from "./components/Layouts/FlexBox";
+import Welcome from "./screens/WelcomeScreen";
+import Styling from "./components/Layouts/Styling";
 
 export default function App() {
   return (
@@ -21,7 +23,9 @@ export default function App() {
       {/* <Stylesheet /> */}
       {/* <Dimentions /> */}
       {/* <DeviceOrientation /> */}
-      <FlexBox />
+      {/* <FlexBox /> */}
+      {/* <Welcome /> */}
+      <Styling />
       <StatusBar style="auto" />
     </>
   );
