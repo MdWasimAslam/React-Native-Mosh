@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import AppButton from "../../AppComponent/AppButton";
 const Styling = () => {
   return (
     <View
@@ -51,6 +52,7 @@ const Styling = () => {
         Styling
       </Text>
       <MaterialCommunityIcons name="email" size={50} color="dodgerblue" />
+      <AppButton title="Login" />
     </View>
   );
 };
