@@ -3,12 +3,14 @@ import React from "react";
 
 const AppCard = ({ title, price, image }) => {
   return (
-    <View style={styles.cardContainer}>
-      <Image source={image} style={styles.image} resizeMode="cover" />
-      <View style={styles.textContainer}>
-        <Text style={styles.title}>{title}</Text>
-        <View style={styles.priceButton}>
-          <Text style={styles.price}>{price}</Text>
+    <View style={{ alignItems: "center" }}>
+      <View style={styles.cardContainer}>
+        <Image source={image} style={styles.image} resizeMode="cover" />
+        <View style={styles.textContainer}>
+          <Text style={styles.title}>{title}</Text>
+          <View style={styles.priceButton}>
+            <Text style={styles.price}>{price}</Text>
+          </View>
         </View>
       </View>
     </View>
@@ -19,7 +21,7 @@ export default AppCard;
 
 const styles = StyleSheet.create({
   cardContainer: {
-    width: "100%",
+    width: "90%",
     height: 300,
     backgroundColor: "#e3e3e3",
     borderRadius: 15,

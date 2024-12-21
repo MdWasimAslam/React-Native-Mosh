@@ -14,7 +14,12 @@ const Welcome = () => {
         <Text style={styles.tagLine}>Sell What You Don't Need</Text>
       </View>
       <View style={styles.btnContainer}>
-        <AppButton title="Login" />
+        <AppButton
+          title="Login"
+          onPress={() => {
+            navigate();
+          }}
+        />
         <AppButton title="Register" color="secondary" />
       </View>
     </ImageBackground>

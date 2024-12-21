@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import React from "react";
 
-const AppList = ({ image, title, subTitle, onPress }) => {
+const AppList = ({ image, title, subTitle, IconComponent, onPress }) => {
   return (
     <TouchableOpacity
       style={styles.container}
@@ -9,11 +9,12 @@ const AppList = ({ image, title, subTitle, onPress }) => {
       underlayColor="#f0f0f0"
     >
       <View>
-        <Image style={styles.image} source={image} />
+        {IconComponent}
+        {image && <Image source={image} style={styles.image} />}
       </View>
-      <View>
+      <View style={styles.TextContainer}>
         <Text style={styles.textTitle}>{title}</Text>
-        <Text style={styles.textSubTitle}>{subTitle}</Text>
+        {subTitle && <Text style={styles.textSubTitle}>{subTitle}</Text>}
       </View>
     </TouchableOpacity>
   );
@@ -25,6 +26,7 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
     padding: 15,
+    backgroundColor: "#F9F6F7",
     // marginVertical: 20,
   },
   image: {
@@ -42,5 +44,8 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     fontSize: 16,
     color: "#777",
+  },
+  TextContainer: {
+    justifyContent: "center",
   },
 });
