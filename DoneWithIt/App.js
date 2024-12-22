@@ -25,6 +25,7 @@ import Input from "./components/fundamentalConcepts/Input";
 import AppInputText from "./AppComponent/AppInputText";
 import Switchs from "./components/fundamentalConcepts/Switchs";
 import AppPicker from "./AppComponent/AppPicker";
+import LoginScreen from "./screens/LoginScreen";
 
 const categories = [
   { label: "Furniture", value: 1 },
@@ -80,13 +81,14 @@ export default function App() {
         {/* <Input /> */}
         {/* <AppInputText icon={"email"} placeholder="Email" /> */}
         {/* <Switchs /> */}
-        <AppPicker
+        {/* <AppPicker
           icon="apps"
           placeholder={"Category"}
           items={categories}
           onSelectItem={(item) => setcategory(item)}
           selectedItem={category}
-        />
+        /> */}
+        <LoginScreen />
         <StatusBar style="auto" />
       </GestureHandlerRootView>
     </SafeAreaView>
