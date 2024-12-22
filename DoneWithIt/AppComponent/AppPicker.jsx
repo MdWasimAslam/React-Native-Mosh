@@ -11,16 +11,18 @@ import React from "react";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import Screen from "../screens/Screen";
 import AppPickerItem from "./AppPickerItem";
+import { useFormikContext } from "formik";
 
 const AppPicker = ({
   icon,
   placeholder,
   items,
   onSelectItem,
-  SelectedItem,
+  selectedItem,
 }) => {
   const [openModal, setopenModal] = React.useState(false);
-
+  const { errors, touched, setFieldTouched, setFieldValue } =
+    useFormikContext();
   return (
     <>
       <TouchableOpacity onPress={() => setopenModal(true)}>
@@ -32,7 +34,13 @@ const AppPicker = ({
             style={styles.icon}
           />
           <Text style={{ flex: 1 }}>
-            {SelectedItem ? SelectedItem.label : placeholder}
+            {selectedItem ? (
+              <Text style={{ color: "black" }}>{selectedItem.label}</Text>
+            ) : (
+              <Text style={{ color: "lightgray", fontWeight: "semibold" }}>
+                {placeholder}
+              </Text>
+            )}
           </Text>
 
           <MaterialCommunityIcons name="chevron-down" size={20} color="gray" />

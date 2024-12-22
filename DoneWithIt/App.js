@@ -26,6 +26,7 @@ import AppInputText from "./AppComponent/AppInputText";
 import Switchs from "./components/fundamentalConcepts/Switchs";
 import AppPicker from "./AppComponent/AppPicker";
 import LoginScreen from "./screens/LoginScreen";
+import ListingEditScreen from "./screens/ListingEditScreen";
 
 const categories = [
   { label: "Furniture", value: 1 },
@@ -34,7 +35,7 @@ const categories = [
 ];
 export default function App() {
   const [category, setcategory] = React.useState(categories[0]);
-  console.log("=====>", category);
+
   return (
     <SafeAreaView style={styles.container}>
       <GestureHandlerRootView>
@@ -86,9 +87,10 @@ export default function App() {
           placeholder={"Category"}
           items={categories}
           onSelectItem={(item) => setcategory(item)}
-          selectedItem={category}
+          SelectedItem={category}
         /> */}
-        <LoginScreen />
+        {/* <LoginScreen /> */}
+        <ListingEditScreen />
         <StatusBar style="auto" />
       </GestureHandlerRootView>
     </SafeAreaView>
